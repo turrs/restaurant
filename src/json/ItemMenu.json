@@ -1,19 +1,49 @@
 {
   "menu": [
     {
-      "_id": 1,
+      "id": "0",
       "name": "Bakso",
       "price": 15000
     },
     {
-      "_id": 2,
+      "id": "1",
       "name": "Coto",
       "price": 17000
     },
     {
-      "_id": 3,
+      "id": "2",
       "name": "Martabak",
       "price": 25000
+    },
+    {
+      "id": "3",
+      "name": "Mie Ayam",
+      "price": 16000
+    },
+    {
+      "id": "4",
+      "name": "Nasi Goreng",
+      "price": 17000
+    },
+    {
+      "id": "5",
+      "name": "Ayam Lalapan",
+      "price": 25000
+    },
+    {
+      "id": "6",
+      "name": "Mie Gacoan",
+      "price": 18000
+    },
+    {
+      "id": "7",
+      "name": "Nasi Goreng Seafood",
+      "price": 28000
+    },
+    {
+      "id": "8",
+      "name": "Es Teh",
+      "price": 8000
     }
   ]
 }

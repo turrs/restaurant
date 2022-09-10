@@ -1,22 +1,23 @@
 import React from "react";
 import { ItemMenu } from "../../components";
 import { menu } from "../../json/ItemMenu.json";
-import { Col, Row, Empty } from "antd";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Axios } from "../../Utils";
+import { useContext } from "react";
+import { AppContext } from "../../context";
 const FoodMenu = () => {
-  let params = {
-    id: 1,
-    table: 5,
-  };
-  console.log(123, menu);
+  let params = { id: 1, table: 5 };
+
   return (
-    <div className="flex flex-row flex-wrap bg-red">
-      {menu.map((menu, id) => {
+    <div className="flex flex-row flex-wrap bg-white p-1">
+      {menu.map((menu, key) => {
         return (
-          <div className="flex flex-row" key={menu.id}>
+          <div className="p-2" key={menu.id}>
             <ItemMenu
-              id={id}
+              id={menu.id}
               name={menu.name}
-              price={menu.prince}
+              price={menu.price}
               params={{ id: params.id, table: params.table }}
             />
           </div>

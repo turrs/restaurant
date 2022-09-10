@@ -1,11 +1,14 @@
 import reactLogo from "./assets/react.svg";
-import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { Button } from "./components";
 import { MainMenu } from "./Pages";
 // eslint-disable-next-line no-unused-vars
 function App(props) {
-  return <MainMenu></MainMenu>;
+  return (
+    <div className="bg-[#0f172a] w-full h-full  grow-1">
+      <MainMenu></MainMenu>
+    </div>
+  );
 }
 
 // eslint-disable-next-line prettier/prettier

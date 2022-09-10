@@ -14,7 +14,7 @@ const ItemMenu = ({ params, id, name, price }) => {
   const dispatch = useDispatch();
   const value = useSelector(state => state);
   return (
-    <div>
+    <div className="bg-black hover:scale-105 hover:shadow-sm hover:shadow-blue ">
       <Card
         style={{
           width: 300,
