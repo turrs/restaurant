@@ -50,7 +50,6 @@ const ModalPay = ({ menu, totalPaying }) => {
         title="Pay"
         open={isModalOpen}
         onOk={() => handleOk(totalPay, tunai)}
-        okText="Pay"
         onCancel={handleCancel}
       >
         <p> Total Bayar : {totalPay}</p>

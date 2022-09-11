@@ -2,10 +2,8 @@ import React from "react";
 import ItemHistory from "../ItemHistory";
 
 const History = ({ value }) => {
-  console.log(11222, value);
-
   return (
-    <div className="bg-white">
+    <div className="bg-white w-[100%]">
       {value.order.transaction.map((menu, index) => {
         console.log("nih menu", menu);
         return (
@@ -14,7 +12,7 @@ const History = ({ value }) => {
           </div>
         );
       })}
-      <div className="bg-blue flex items-center p-1">
+      <div className="bg-blue flex items-center p-1  bottom-5 w-full ">
         <p className="font-medium text-xs">Total Transaction : </p>
         <p>{value.order.total}</p>
       </div>

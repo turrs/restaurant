@@ -10,9 +10,11 @@ const globalState = {
   order: {
     table: 0,
     total: 0,
+    totalMenu: 0,
     menu: [],
     transaction: [],
   },
+  content: "foodMenu",
 };
 
 //reducer
@@ -22,6 +24,7 @@ const rootReducer = (state = globalState, action) => {
     case "INCREMENT":
       let data = { ...state };
       data.order.table = action.table;
+      data.order.totalMenu = data.order.totalMenu + 1;
       data.order.menu.push(`${action.id}`);
       return { ...state, order: data.order };
     case "PAY":
@@ -32,17 +35,24 @@ const rootReducer = (state = globalState, action) => {
         table: dataReset.order.table,
       });
       dataReset.order.total = dataReset.order.total + action.profit;
+      dataReset.order.totalMenu = 0;
       dataReset.order.table = 0;
       dataReset.order.menu = [];
       return { ...state, order: dataReset.order };
     case "RESET":
+      data.order.totalMenu = 0;
       data.order.table = 0;
       data.order.menu = [];
       return { ...state, order: data.order };
     case "DELETE":
       let deleteData = { ...state };
+      deleteData.order.totalMenu = deleteData.order.totalMenu - 1;
       deleteData.order.menu.splice(action.index, 1);
       return { ...state, order: deleteData.order };
+    case "CHANGE":
+      let changeMenu = { ...state };
+      changeMenu.content = action.menu;
+      return { ...state, content: changeMenu.content };
     default:
       return state;
   }

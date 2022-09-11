@@ -35,7 +35,7 @@ const Pay = ({ value }) => {
           let itemsPrice = data.menu.find(x => x.id === menu).price;
           let items = data.menu.find(x => x.id === menu);
           return (
-            <div className="p-1 hover:scale-105">
+            <div key={index} className="p-1 hover:scale-105">
               <OrderItems items={items} index={index}></OrderItems>
             </div>
           );
