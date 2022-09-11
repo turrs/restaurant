@@ -9,6 +9,9 @@ export const ContextWrapper = ({ children }) => {
   const [foodData, setFoodData] = useState([]);
   const [show, setShow] = useState(true);
   const [showDekstop, setShowDekstop] = useState(true);
+  const [menuItemData, setMenuItemData] = useState([]);
+  const [valueSearch, setValueSearch] = useState("");
+  const [foodMenuData, setFoodMenuData] = useState([]);
   const fetchMenu = async () => {
     await Axios.get("/food")
       .then(
@@ -33,6 +36,12 @@ export const ContextWrapper = ({ children }) => {
         fetchMenu,
         showDekstop,
         setShowDekstop,
+        menuItemData,
+        setMenuItemData,
+        valueSearch,
+        setValueSearch,
+        foodMenuData,
+        setFoodMenuData,
       }}
     >
       {children}

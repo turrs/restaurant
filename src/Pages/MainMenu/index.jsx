@@ -42,9 +42,9 @@ const MainMenu = () => {
         <Header />
       </div>
       <div className="flex flex-row flex-wrap">
-        <div className="md:w-9/12 flex-row bg-[#cccccc]">
+        <div className="w-9/12  flex-row bg-[#cccccc]">
           <div className="flex flex-row">
-            <div className="md:w-1/12 bg-white h-[100vh]">
+            <div className="md:w-1/12  bg-white h-[100vh]">
               <LeftMenu />
             </div>
             <div className="md:w-11/12">
@@ -59,7 +59,7 @@ const MainMenu = () => {
           </div>
         </div>
         <div className="md:w-3/12">
-          <div className="pt-5 flex md:w-full  w-[500px] ">
+          <div className="pt-5 flex md:w-full  ">
             {showDekstop && (
               <>
                 <div className=" w-full md:block hidden ">
