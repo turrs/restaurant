@@ -43,7 +43,9 @@ const ModalPay = ({ menu, totalPaying }) => {
   };
   return (
     <>
-      <Button text="Pay" onClick={e => showModal(menu, totalPaying)}></Button>
+      <div className="w-[80%]">
+        <Button text="Pay" onClick={e => showModal(menu, totalPaying)}></Button>
+      </div>
       <Modal
         title="Pay"
         open={isModalOpen}
@@ -56,7 +58,7 @@ const ModalPay = ({ menu, totalPaying }) => {
         <InputNumber
           min={1000}
           max={9999999999}
-          defaultValue={3}
+          defaultValue={0}
           onChange={e => onChange(e, totalPay)}
         />
         <p> Total Kembalian : </p>

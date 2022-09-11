@@ -1,2 +1,3 @@
 import IchickenMozarellaKentang from "./ChickenMozarellaKentangGoreng.png";
-export { IchickenMozarellaKentang };
+import IcashierLogo from "./IconCashier.svg";
+export { IchickenMozarellaKentang, IcashierLogo };

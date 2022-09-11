@@ -5,7 +5,7 @@ import { MainMenu } from "./Pages";
 // eslint-disable-next-line no-unused-vars
 function App(props) {
   return (
-    <div className="bg-[#0f172a] w-full h-full  grow-1">
+    <div className="bg-white w-full h-full  grow-1">
       <MainMenu></MainMenu>
     </div>
   );

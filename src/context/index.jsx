@@ -8,6 +8,7 @@ export const AppContext = createContext(null);
 export const ContextWrapper = ({ children }) => {
   const [foodData, setFoodData] = useState([]);
   const [show, setShow] = useState(true);
+  const [showDekstop, setShowDekstop] = useState(true);
   const fetchMenu = async () => {
     await Axios.get("/food")
       .then(
@@ -24,7 +25,15 @@ export const ContextWrapper = ({ children }) => {
   };
   return (
     <AppContext.Provider
-      value={{ setFoodData, show, setShow, foodData, fetchMenu }}
+      value={{
+        setFoodData,
+        show,
+        setShow,
+        foodData,
+        fetchMenu,
+        showDekstop,
+        setShowDekstop,
+      }}
     >
       {children}
     </AppContext.Provider>

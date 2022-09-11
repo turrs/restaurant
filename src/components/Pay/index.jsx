@@ -22,11 +22,14 @@ const Pay = ({ value }) => {
 
   useEffect(() => {}, [value]);
   return (
-    <div className="flex flex-col w-full h-full bg-[#64748b] hover:scale-105 rounded-[10px] group hover:shadow-md hover:shadow-blue">
-      <div className="flex justify-center pt-5 w-full h-full">
-        <p className="text-blue  text-lg">Meja {value.order.table}</p>
+    <div className="flex flex-col md:p-0 p-10 w-full h-full bg-white  rounded-[10px] group hover:shadow-md hover:shadow-blue">
+      <div className="flex justify-center w-full h-full">
+        <p className="text-blue  text-lg font-bold">Meja {value.order.table}</p>
       </div>
-      <div>
+      <div className="p-2">
+        <p className="text-black font-bold text-[18px]">Current Order</p>
+      </div>
+      <div className="-mt-5">
         {value.order.menu.map((menu, index) => {
           let itemsMenu = data.menu.find(x => x.id === menu).name;
           let itemsPrice = data.menu.find(x => x.id === menu).price;
@@ -38,10 +41,12 @@ const Pay = ({ value }) => {
           );
         })}
       </div>
-      <div className="flex justify-center pt-2 bg-blue">
-        <p>Total Pay : {totalPay}</p>
+      <div className="flex justify-center items-center pt-2 bg-blue">
+        <p className="text-[20px] text-center font-bold">
+          Total Pay : {totalPay}
+        </p>
       </div>
-      <div className="p-2">
+      <div className="p-2  w-full flex justify-center ">
         <ModalPay menu={value.order.menu} totalPaying={totalPaying} />
       </div>
     </div>
